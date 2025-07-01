@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Room 1 - Caesar Cipher</title>
+  <link rel="stylesheet" href="stylesheets/room1.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 Room 1: Caesar Cipher</h1>
+    <p class="ciphertext-label">Encrypted Text:</p>
+    <p id="ciphertext" class="ciphertext-box"></p>
+
+    <input type="text" id="user-input" placeholder="Enter decrypted text..." />
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="result-msg"></p>
+
+    <div class="hints">
+      <h3>💡 Need help?</h3>
+      <button id="hint1-btn">Show Hint 1</button>
+      <button id="hint2-btn" disabled>Show Hint 2</button>
+      <button id="hint3-btn" disabled>Show Hint 3</button>
+
+      <div id="hint-1" class="hint hidden">
+          Caesar Cipher shifts each letter by a fixed number. A shift of 3 means A → D, B → E...
+      </div>
+      <div id="hint-2" class="hint hidden">
+          Your job is to figure out what the original text was by reversing the shift. Keep trying various possible keys!
+      </div>
+      <div id="hint-3" class="hint hidden">
+          Answer: <span id="hint-answer"></span>
+      </div>
+  </div>
+
+  </div>
+  <script src="scripts/room1.js"></script>
+</body>
+</html>

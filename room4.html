@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Room 4 - AES using XOR</title>
+  <link rel="stylesheet" href="stylesheets/room4.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 Room 4: AES using XOR</h1>
+    
+    <p class="keyword-label"><strong>Ciphertext (Hex):</strong> <span id="ciphertext"></span></p>
+    <p class="keyword-label"><strong>Key (Hex):</strong> <span id="key"></span></p>
+
+    <input type="text" id="user-input" placeholder="Type decrypted message here..." autocomplete="off"/>
+    <button id="submit-btn">Submit</button>
+    <p id="result-msg"></p>
+
+    <div class="hints">
+      <h3>💡 Need help?</h3>
+      <button id="hint1-btn">Show Hint 1</button>
+      <button id="hint2-btn" disabled>Show Hint 2</button>
+      <button id="hint3-btn" disabled>Show Hint 3</button>
+      <button id="hint4-btn" disabled>Show Hint 4</button>
+      <button id="hint5-btn" disabled>Show Hint 5</button>
+
+      <div id="hint-1" class="hint hidden"></div>
+      <div id="hint-2" class="hint hidden"></div>
+      <div id="hint-3" class="hint hidden"></div>
+      <div id="hint-4" class="hint hidden"></div>
+      <div id="hint-5" class="hint hidden"></div>
+    </div>
+  </div>
+
+  <script src="scripts/room4.js"></script>
+</body>
+</html>

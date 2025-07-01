@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Room 2 - Vigenère Cipher</title>
+  <link rel="stylesheet" href="stylesheets/room2.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 Room 2: Vigenère Cipher</h1>
+
+    <p class="ciphertext-label"><strong>Encrypted Text:</strong></p>
+    <p id="ciphertext" class="ciphertext-box"></p>
+
+    <!-- Show the keyword upfront as part of the question -->
+    <p class="keyword-label"><strong>Keyword: </strong><strong id="keyword-display"></strong></p>
+
+    <input type="text" id="user-input" placeholder="Enter decrypted text..." autocomplete="off" />
+    <button id="submit-btn" onclick="checkAnswer()">Submit</button>
+    <p id="result-msg"></p>
+
+    <div class="hints">
+      <h3>💡 Need help?</h3>
+      <button id="hint1-btn">Show Hint 1</button>
+      <button id="hint2-btn" disabled>Show Hint 2</button>
+      <button id="hint3-btn" disabled>Show Hint 3</button>
+
+      <div id="hint-1" class="hint hidden">
+        Vigenère Cipher is a polyalphabetic cipher. Each letter is shifted by the letter in the repeated keyword.<br/>
+        The keyword repeats to match the message length.
+      </div>
+      <div id="hint-2" class="hint hidden">
+        To decrypt, shift each letter of the ciphertext backwards by the alphabetical index of the corresponding keyword letter.<br/>
+        (A=0, B=1, ..., Z=25)
+      </div>
+      <div id="hint-3" class="hint hidden">
+        The original plaintext was: <b><span id="hint-answer"></span></b>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/room2.js"></script>
+</body>
+</html>

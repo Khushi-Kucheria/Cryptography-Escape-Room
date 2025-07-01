@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Room 3 - RSA Cipher</title>
+  <link rel="stylesheet" href="stylesheets/room3.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 Room 3: RSA Encryption</h1>
+    <p class="ciphertext-label"><strong>Encrypted Message:</strong></p>
+    <p id="ciphertext" class="ciphertext-box"></p>
+    <p><strong>Public Key:</strong> <span id="public-key"></span></p>
+
+    <input type="text" id="user-input" placeholder="Enter decrypted text..." />
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="result-msg"></p>
+
+    <div class="hints">
+      <h3>💡 Need help?</h3>
+      <button id="hint1-btn">Show Hint 1</button>
+      <button id="hint2-btn" disabled>Show Hint 2</button>
+      <button id="hint3-btn" disabled>Show Hint 3</button>
+      <button id="hint4-btn" disabled>Show Hint 4</button>
+      <button id="hint5-btn" disabled>Show Hint 5</button>
+
+      <div id="hint-1" class="hint hidden">
+        RSA encrypts each letter's number `m` as `c = (m^e) mod n`. A = 0, B = 1, ..., Z = 25.
+      </div>
+      <div id="hint-2" class="hint hidden">
+        Try converting each encrypted number `c` back by computing the modular inverse `d` of `e` mod φ(n).
+      </div>
+      <div id="hint-3" class="hint hidden">
+        Use the Extended Euclidean Algorithm to find the modular inverse of `e mod φ(n)` — that gives you the decryption key `d`.
+      </div>
+      <div id="hint-4" class="hint hidden">
+        Decryption: `m = (c^d) mod n` for each number. Then convert back to letters.
+      </div>
+      <div id="hint-5" class="hint hidden">
+        Answer: <span id="hint-answer"></span>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/room3.js"></script>
+</body>
+</html>
