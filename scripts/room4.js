@@ -77,7 +77,7 @@ document.getElementById("submit-btn").addEventListener("click", () => {
   const msg = document.getElementById("result-msg");
 
   if (input.toUpperCase() === puzzle.plaintext.toUpperCase()) {
-    msg.textContent = "✅ Correct! Moving to the next room...";
+    msg.textContent = "✅ Correct! Moving on...";
     msg.style.color = "lightgreen";
     setTimeout(() => {
       window.location.href = "escaped.html"; // Update this path to your next page
