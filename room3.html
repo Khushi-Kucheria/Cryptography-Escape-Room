@@ -26,16 +26,24 @@
       <button id="hint5-btn" disabled>Show Hint 5</button>
 
       <div id="hint-1" class="hint hidden">
-        RSA encrypts each letter's number `m` as `c = (m^e) mod n`. A = 0, B = 1, ..., Z = 25.
+        </strong> RSA encrypts each letter's number <code>m</code> using the formula:<br>
+        <code>c = (m^e) mod n</code><br>
+        Where letters are encoded as: A = 0, B = 1, ..., Z = 25.
       </div>
       <div id="hint-2" class="hint hidden">
-        Try converting each encrypted number `c` back by computing the modular inverse `d` of `e` mod φ(n).
+        </strong> To decrypt, you need the private key exponent <code>d</code>, which is the modular inverse of <code>e</code> modulo φ(n).<br>
+        Start by factoring <code>n</code> to find <code>p</code> and <code>q</code>, then compute:<br>
+        <code>φ(n) = (p - 1) × (q - 1)</code>
       </div>
       <div id="hint-3" class="hint hidden">
-        Use the Extended Euclidean Algorithm to find the modular inverse of `e mod φ(n)` — that gives you the decryption key `d`.
+        </strong> Use the Extended Euclidean Algorithm to find <code>d</code> such that:<br>
+        <code>(d × e) mod φ(n) = 1</code><br>
+        This <code>d</code> is your decryption exponent.
       </div>
       <div id="hint-4" class="hint hidden">
-        Decryption: `m = (c^d) mod n` for each number. Then convert back to letters.
+        </strong> Decrypt each number <code>c</code> using:<br>
+        <code>m = (c^d) mod n</code><br>
+        Then convert <code>m</code> back into letters using the A = 0 to Z = 25 mapping.
       </div>
       <div id="hint-5" class="hint hidden">
         Answer: <span id="hint-answer"></span>
