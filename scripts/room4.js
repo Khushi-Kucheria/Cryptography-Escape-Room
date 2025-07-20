@@ -3,27 +3,27 @@ const puzzles = [
   {
     plaintext: "OPEN",
     key:        "4A3C2D1B",
-    ciphertext: "25697A77"
+    ciphertext: "056C6855"
   },
   {
     plaintext: "DONE",
     key:        "1C7F4E23",
-    ciphertext: "D25B2B51"
+    ciphertext: "58300066"
   },
   {
     plaintext: "TEST",
     key:        "5B3A297C",
-    ciphertext: "4F4F4B08"
+    ciphertext: "0F7F7A28"
   },
   {
     plaintext: "CLUE",
     key:        "3F2A1D5E",
-    ciphertext: "0C5B4C3B"
+    ciphertext: "7C66481B"
   },
   {
     plaintext: "ROOM",
     key:        "2E1C3B47",
-    ciphertext: "5E5A4E2F"
+    ciphertext: "7C53740A"
   }
 ];
 
